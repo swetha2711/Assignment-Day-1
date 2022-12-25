@@ -1,0 +1,39 @@
+Q1.Difference between HTTP1.1 and HTTP2
+Answer:
+HTTP1.1 was major version of HTTP network which works on textual format and used by World Wide Web across clients and servers.Here,several requests and responses are merged
+into a single connection.Secondly,TCP connection is blocked until the response is received which means all the information related to header file is repeated in every requests.
+This is the major drawback when used for faster loading applications.Hence,HTTP2 which is an advanced version of HTTP1.1 was created over Google's SPDY protocol and works on binary format.
+HTTP2 uses multiplexing which is a one shot response for similar kind of resources.It is fast,efficient and more trusted or secure.It is because of this when we search in internet ,
+we get atleast similar information related to our search.
+While HTTP1.1 compresses data by itself.HTTP2 uses HPACK is used to split data from header.It compresses the header which reduces data redundancy.
+Let us try to take an example to understand this comparison
+If we try to load an image split into 200 small images over both HTTP1.1 and HTTP2,HTTP2 uses PUSH frame that collects all images required by the client once the first image starts loading.
+Thus it avoids round trip time.In HTTP1.1,image keeps loading for a longer time one after another.
+Thus,HTTP2 is currently widely used by major browsers.
+
+
+
+Q2.Object and its internal representation in Javascript
+Object are an unordered collection of related data,of primitive and reference types,in the form of key:value pairs.
+Objects can be created using 
+1.Object Literal:
+Define the property and values inside curly braces.eg: let car = {name:'WagonR',maker:'Honda'}
+2.Using new keyword:eg: var person= new Object();
+                        person.firstName="John";
+3.Using object.create() method:
+Objects can also be created using object.create()  method.It allows you to create object without having to create constructor function.
+eg:var animal =Object.create(Animal);
+animal.type="Invertebrates"
+Properties of object:
+Properties of an object defines the characteristics of the object.You access the properties of an object using dot notation.
+objectName.propertyName
+Eg:
+var myCar = new Object();
+myCar.make="Ford"
+myCar.year="2022"
+Unassignes properties of an object are undefined.
+Object Methods:
+These are actions that can be performed on objects.For example,to get the headlights of the car "on" ,there will be a mechanical functionality.
+eg:
+function(){
+return headlights.on}
